@@ -16,6 +16,7 @@ COPY package*.json ./
 
 # install project dependencies with omit dev dependencies
 RUN npm install
+RUN npm install puppeteer
 
 # Start the application
 CMD ["npm", "start"]
