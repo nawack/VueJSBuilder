@@ -12,10 +12,10 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 WORKDIR /app
 
 # copy both 'package.json' and 'package-lock.json' (if available)
-#COPY package*.json ./
+COPY package*.json ./
 
 # install project dependencies with omit dev dependencies
-#RUN npm install
+RUN npm install
 
 # Start the application
 CMD ["npm", "start"]
