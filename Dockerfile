@@ -1,8 +1,8 @@
-FROM alpine:latest
+FROM node:16.16.0-alpine
 
 # Install dependencies
 RUN apk update && \
-    apk add --no-cache nodejs=18.17.0-r0 npm python3 chromium udev ttf-freefont
+    apk add --no-cache python3 chromium udev ttf-freefont
 
 # Set environment variables
 ENV CHROME_BIN=/usr/bin/chromium-browser
