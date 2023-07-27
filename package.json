@@ -2,13 +2,6 @@
   "name": "weweb-front",
   "version": "3.5.0",
   "private": true,
-  "scripts": {
-    "build-front": "vue-cli-service build --mode front.prod src/_front/main.js",
-    "build-front-preprod": "vue-cli-service build --mode front.preprod src/_front/main.js",
-    "build-front-staging": "vue-cli-service build --mode front.staging src/_front/main.js",
-    "build-front-dev": "vue-cli-service build --mode front.dev src/_front/main.js",
-    "serve": "vue-cli-service serve --open --mode serve.front --port=4040 src/_front/main.js"
-  },
   "dependencies": {
     "@vueuse/head": "0.7.5",
     "axios": "0.26.1",
