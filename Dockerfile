@@ -8,9 +8,6 @@ RUN apk update && \
 ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
-# Install Puppeteer
-RUN npm install puppeteer
-
 # Set the working directory
 WORKDIR /app
 
