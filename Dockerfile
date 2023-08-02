@@ -7,8 +7,6 @@ RUN apk add --no-cache \
       harfbuzz \
       ca-certificates \
       ttf-freefont \
-      nodejs \
-      yarn \
       python3
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
