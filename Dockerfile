@@ -12,8 +12,7 @@ RUN apt-get update \
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV CHROMIUM_PATH google-chrome-stable
 
-WORKDIR /app
-COPY package*.json ./
+ADD package.json package-lock.json /
 RUN npm install
 
 # configure puppeteer user
@@ -22,6 +21,9 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /node_modules
 USER pptruser
+
+COPY . /app
+WORKDIR /app
 
 # Start the application
 CMD ["npm", "start"]
